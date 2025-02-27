@@ -112,3 +112,26 @@ const calc = (num1, operador, num2) => {
 };
 
 console.log(`o resulatado da operacao e ${calc(10,'+',10)}`);
+
+//simplificando arrow funcao 
+
+
+const Calc = (num1, operador, num2) => eval(`${num1} ${operador} ${num2}`);
+
+console.log(`o resulatado da operacao e ${Calc(10,'+',4)}`);
+
+//IIFE
+//funcao imediata
+
+const iife = (function(){
+    console.log("estou sendo inicializada imediatamente");
+})();
+
+const start = (function(app){
+    console.log(`estou sendo inicializada imediatamente o app ${app}`)
+})('Whats');
+
+
+
+
+//
