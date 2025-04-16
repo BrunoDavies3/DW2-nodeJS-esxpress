@@ -1,0 +1,28 @@
+<%- include ('partials/navbar.ejs') %>
+<%- include('partials/header.ejs')%>
+
+<div class="card table" style="width: 100%; max-width: 1500px; margin: 0 auto;">
+  <div class="card-header bg-secondary text-white" style="font-size: 30px; font-family: 'Fruktur', cursive;">
+    Clientes
+  </div>
+  <ul class="list-group list-group-flush">
+    
+    <% clientes.forEach(clientes => { %>
+       
+        
+    <li class="list-group-item">
+      <div class="mb-2"><strong>NOME:</strong><%= clientes.nome %></div>
+      <div class="mb-2"><strong>CPF:</strong> <%= clientes.cpf %></div>
+      <div class="mb-2"><strong>ENDEREÇO:</strong><%= clientes.endereco %></div>
+      <button type="button" class="btn btn-danger mt-2">Mandar Mensagem</button>
+    </li>
+
+    
+
+
+    <% }) %>
+
+  </ul>
+</div>
+
+<%- include ('partials/footer.ejs') %>
